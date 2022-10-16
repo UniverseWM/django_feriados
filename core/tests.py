@@ -11,6 +11,9 @@ class NatalTest(TestCase):
     def test_exto(self):
         self.assertContains(self.resp, 'Natal')
 
+    def test_templete(self):
+        self.assertTemplateUsed(self.resp, 'natal.html')
+
 
 class TiradentesTest(TestCase):
     def setUp(self):

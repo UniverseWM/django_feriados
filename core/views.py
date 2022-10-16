@@ -3,7 +3,11 @@ from django.shortcuts import render
 
 
 def natal(request):
-    return render(request, 'natal.html')
+    contexto = {
+        'natal': True,
+        'tiradentes': False
+    }
+    return render(request, 'natal.html', contexto)
 
 
 def tiradentes(request):
